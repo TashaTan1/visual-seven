@@ -7,6 +7,7 @@
 *
 ***************************************************************************************/
 
+//variables
 let seven;
 let timer = 5;
 let button;
@@ -30,6 +31,7 @@ function sp() {
   stroke(67, 80, 200);
   noFill();
   translate(0, 0, -50);
+  //animation for visual
   for (let phi = 0; phi < 180; phi += 2) {
     beginShape(POINTS);
     for (let theta = 0; theta <= 360; theta += 0.2) {
@@ -49,9 +51,9 @@ function draw() {
   rotateX(angle);
   sp();
   angle = (angle + 1) % 360;
-
+//timer
   if (frameCount % 60 == 0 && timer > 0) {
-    // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+   
     timer--;
   }
   //  console.log(timer);
@@ -66,7 +68,7 @@ function draw() {
     button.position(425, height/2);
     button.mousePressed(function goToAnotherPage() {
       window.location.href =
-        "https://editor.p5js.org/natashatan/sketches/gxSMDJpDT";
+        "https://tashatan1.github.io/let-s-breath/";
     });
   }
 
